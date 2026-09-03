@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SehatSetu | Rural Healthcare Coordination</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">Sehat<span>Setu</span></div>
+        <div class="tagline">Connecting every step of rural healthcare</div>
+      </div>
+      <div class="role-wrap">
+        <label for="roleSelect">Demo role</label>
+        <select id="roleSelect">
+          <option value="patient">Patient / Family</option>
+          <option value="asha">ASHA / Health Worker</option>
+          <option value="hospital">Hospital / Doctor</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <section id="patientView" class="view">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">RAMPUR VILLAGE</p>
+            <h1>Good morning, Ramesh 👋</h1>
+            <p class="muted">Simple access to care, when you need it.</p>
+          </div>
+          <div class="status-pill">● Connected</div>
+        </div>
+
+        <button class="emergency-card" id="emergencyBtn">
+          <div>
+            <span class="emergency-icon">🚨</span>
+            <h2>Get Emergency Help</h2>
+            <p>Request urgent assistance and share your location.</p>
+          </div>
+          <span class="arrow">→</span>
+        </button>
+
+        <div class="grid two">
+          <article class="card weather-card">
+            <div class="card-title"><span>🌦️</span><strong>Mausam-Swasthya</strong></div>
+            <span class="risk-badge">ELEVATED SEASONAL RISK</span>
+            <p>Rain and humidity may increase mosquito-related health risk.</p>
+            <button class="text-btn" data-page="weather">View alert →</button>
+          </article>
+
+          <article class="card">
+            <div class="card-title"><span>🎯</span><strong>Agla Kadam</strong></div>
+            <p class="big-action">Visit PHC today</p>
+            <p class="muted">Your recommended next step</p>
+            <button class="text-btn" data-page="next">View details →</button>
+          </article>
+        </div>
+
+        <div class="section-head">
+          <h2>Quick access</h2>
+        </div>
+        <div class="grid two">
+          <button class="quick-card" data-page="passport">📋 <span>Care Passport<small>Health journey</small></span></button>
+          <button class="quick-card" data-page="referral">🔄 <span>Referral Tracking<small>Track your referral</small></span></button>
+          <button class="quick-card" data-page="findcare">🏥 <span>Find Public Care<small>Nearby facilities</small></span></button>
+          <button class="quick-card" data-page="weather">🔊 <span>Voice Alerts<small>Local-language guidance</small></span></button>
+        </div>
+      </section>
+
+      <section id="ashaView" class="view hidden">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">HEALTH WORKER</p>
+            <h1>Namaste, ASHA Rekha 👋</h1>
+            <p class="muted">Rampur Village • Today's priorities</p>
+          </div>
+          <div class="status-pill">● 5 tasks due</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat danger"><strong>2</strong><span>Emergency</span></div>
+          <div class="stat warn"><strong>5</strong><span>High Risk</span></div>
+          <div class="stat blue"><strong>7</strong><span>Referrals</span></div>
+          <div class="stat green"><strong>11</strong><span>Follow-ups</span></div>
+        </div>
+
+        <article class="card">
+          <div class="section-head"><h2>Today's priority</h2><button class="text-btn" data-page="patient">View patient</button></div>
+          <div class="priority-row danger-line">
+            <div><strong>Ramesh Kumar</strong><small>🚨 Emergency • Severe chest pain</small></div>
+            <span class="eta">🚑 ETA 18 min</span>
+          </div>
+          <div class="priority-row">
+            <div><strong>Sita Devi</strong><small>❤️ Maternal follow-up due</small></div>
+            <span class="tag green-tag">Due today</span>
+          </div>
+          <div class="priority-row">
+            <div><strong>Mohan Lal</strong><small>🔄 Referral pending</small></div>
+            <span class="tag orange-tag">Pending</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-title"><span>🌦️</span><strong>Mausam-Swasthya Alert</strong></div>
+          <p><strong>Elevated seasonal risk</strong></p>
+          <p class="muted">Turn the risk signal into a simple preventive message for the community.</p>
+          <button class="primary-btn" id="voiceBtn">🔊 Play Voice Alert</button>
+        </article>
+      </section>
+
+      <section id="hospitalView" class="view hidden">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">PUBLIC HEALTH FACILITY</p>
+            <h1>District Hospital</h1>
+            <p class="muted">Emergency coordination dashboard</p>
+          </div>
+          <div class="status-pill green-status">● Operational</div>
+        </div>
+
+        <article class="incoming-card">
+          <div class="incoming-head">
+            <div><span class="risk-badge red">INCOMING EMERGENCY</span><h2>Ramesh Kumar, 54</h2></div>
+            <div class="eta-big">🚑 18 min</div>
+          </div>
+          <p><strong>Symptoms:</strong> Severe chest pain • Breathing difficulty</p>
+          <p><strong>Location:</strong> Rampur Village</p>
+          <div class="check-grid">
+            <span>Patient information <b>✓</b></span>
+            <span>Relevant history <b>✓</b></span>
+            <span>Transport coordinated <b>✓</b></span>
+            <span>Emergency team <b class="orange">Preparing</b></span>
+          </div>
+          <div class="button-row">
+            <button class="primary-btn" id="readyBtn">Prepare to Receive</button>
+            <button class="secondary-btn" data-page="passport">View Care Passport</button>
+          </div>
+          <div id="readyMessage" class="ready-message hidden">🟢 <strong>READY TO RECEIVE</strong> • Emergency team notified.</div>
+        </article>
+
+        <div class="grid two">
+          <article class="card">
+            <div class="card-title"><span>🔄</span><strong>Referral Queue</strong></div>
+            <p>7 active referrals</p>
+            <button class="text-btn" data-page="referral">Open tracking →</button>
+          </article>
+          <article class="card">
+            <div class="card-title"><span>📋</span><strong>Care Passport</strong></div>
+            <p>Relevant patient information available for handover.</p>
+            <button class="text-btn" data-page="passport">Open record →</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="detailView" class="view hidden">
+        <button class="back-btn" id="backBtn">← Back</button>
+        <div id="detailContent"></div>
+      </section>
+    </main>
+
+    <div id="emergencyModal" class="modal hidden">
+      <div class="modal-box">
+        <button class="close" id="closeModal">×</button>
+        <p class="eyebrow">EMERGENCY REQUEST</p>
+        <h2>Who needs help?</h2>
+        <div class="form-row"><label>Patient</label><input value="Ramesh Kumar" /></div>
+        <div class="form-row"><label>Location</label><input value="Rampur Village" /></div>
+        <div class="form-row"><label>What happened?</label>
+          <div class="chips"><button class="chip active">Severe chest pain</button><button class="chip active">Breathing difficulty</button></div>
+        </div>
+        <div class="notice">📍 Location sharing is simulated in this prototype.</div>
+        <button class="primary-btn full" id="submitEmergency">Request Emergency Help</button>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
