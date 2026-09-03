@@ -22,7 +22,7 @@ $("readyBtn").onclick = () => {
 };
 
 $("voiceBtn").onclick = () => {
-  const text = "Aapke area mein baarish ke baad machhar ke badne ka  risk badh sakta hai. Ghar ke aas paas jama paani hataiye aur machhar se bachav ke upay kijiye.";
+  const text = "Aapke area mein baarish ke baad machhr ke badne ka  risk badh sakta hai. Ghar ke aas paas jama paani hataiye aur machhr se bachav ke upay kijiye.";
   if ("speechSynthesis" in window) {
     speechSynthesis.cancel();
     speechSynthesis.speak(new SpeechSynthesisUtterance(text));
