@@ -22,7 +22,7 @@ $("readyBtn").onclick = () => {
 };
 
 $("voiceBtn").onclick = () => {
-  const text = "Aapke area mein baarish ke baad machhar ke breeding ka risk badh sakta hai. Ghar ke aas paas jama paani hataiye aur machhar se bachav ke upay kijiye.";
+  const text = "Aapke area mein baarish ke baad machhar ke badne ka  risk badh sakta hai. Ghar ke aas paas jama paani hataiye aur machhar se bachav ke upay kijiye.";
   if ("speechSynthesis" in window) {
     speechSynthesis.cancel();
     speechSynthesis.speak(new SpeechSynthesisUtterance(text));
@@ -84,7 +84,7 @@ function showDetail(page){
       </div>`,
     weather: `
       <div class="detail-card">
-        <p class="eyebrow">MAUSAM-SWASTHYA</p><h1>🌦️ Elevated Seasonal Risk</h1>
+        <p class="eyebrow">PRE-GUIDE</p><h1>🌦️ Elevated Seasonal Risk</h1>
         <p><strong>📍 Rampur Village</strong></p>
         <div class="grid two">
           <div class="card"><strong>🌧️ Rain</strong><p class="muted">Expected in the coming period</p></div>
@@ -97,7 +97,7 @@ function showDetail(page){
       </div>`,
     next: `
       <div class="detail-card">
-        <p class="eyebrow">AGLA KADAM</p><h1>🏥 Visit PHC today</h1>
+        <p class="eyebrow">NEXT-MOVE</p><h1>🏥 Visit PHC today</h1>
         <p>Your next recommended action based on the demo care plan.</p>
         <div class="card"><strong>Suggested window</strong><p class="muted">2 PM – 4 PM • Demo availability</p></div>
         <button class="primary-btn" style="margin-top:15px" onclick="toast('Action confirmed in prototype.')">Take Action</button>
