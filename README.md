@@ -1,4 +1,4 @@
-# SehatSetu Prototype
+# Mr.Cure Prototype
 
 A front-end-only SIH prototype for rural healthcare coordination.
 
